@@ -7,7 +7,7 @@ if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
 number_of_classes = 3
-dataset_size = 100
+dataset_size = 200
 
 # Open webcam
 cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
@@ -20,7 +20,7 @@ done = False
 # Data collection loop
 
 
-class_dir = os.path.join(DATA_DIR, "O")
+class_dir = os.path.join(DATA_DIR, "Z")
 if not os.path.exists(class_dir):
     os.makedirs(class_dir)
 
@@ -37,7 +37,7 @@ while count < dataset_size:
     cv2.imshow("Frame", frame)
 
         # Save the captured frame to the appropriate class folder
-    frame_path = os.path.join(class_dir, f"O{count}.jpg")
+    frame_path = os.path.join(class_dir, f"Z{count}.jpg")
     cv2.imwrite(frame_path, frame)
 
     count += 1

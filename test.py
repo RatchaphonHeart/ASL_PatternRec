@@ -16,7 +16,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
 hands = mp_hands.Hands(
-    static_image_mode=False,  # For live video, set to False
+    static_image_mode=True,  # For live video, set to False
     min_detection_confidence=0.3
 )
 
